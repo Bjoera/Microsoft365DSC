@@ -468,7 +468,7 @@ function Export-TargetResource
 
     try
     {
-        [array] $groups = Get-AzureADMSGroup -All:$true -ErrorAction Stop
+        [array] $groups = Get-AzureADMSGroup -Filter "SecurityEnabled eq true" -ErrorAction Stop
         $i = 1
         $dscContent = ''
         Write-Host "`r`n" -NoNewline
