@@ -465,7 +465,7 @@ function Export-TargetResource
     $data.Add("ConnectionMode", $ConnectionMode)
     Add-M365DSCTelemetryEvent -Data $data
     #endregion
-
+    #
     try
     {
         [array] $groups = Get-AzureADMSGroup -Filter "SecurityEnabled eq true" -ErrorAction Stop
